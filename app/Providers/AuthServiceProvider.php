@@ -28,5 +28,9 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('home', function($user,$account){
 			return $user->id === $account->userid;
 		});
+		
+		Gate::define('transfer_summary', function($user,$transfer){
+			return $user->id === $transfer->userid;
+		});
     }
 }

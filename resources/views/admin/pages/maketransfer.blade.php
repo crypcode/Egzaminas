@@ -49,7 +49,12 @@
                             </div>
 							<div class="col-md-12">
                                 <label class="text-black" for="name">Name</label>
-                                <input type="text" id="name" name="name" class="form-control">
+								<select class="form-control" name="name" >
+                                    @foreach($users as $user)
+                                        <option value="{{$user->name}}">{{{$user->name}}}</option>
+                                    @endforeach
+                                </select>
+								<input type="hidden" name="userid" value="{{ Auth::user()->id }}">
                             </div>
 
                         </div>

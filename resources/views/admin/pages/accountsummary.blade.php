@@ -33,16 +33,20 @@
                             <th>Description</th>
 							<th>Sum</th>
 							<th>Receiver name</th>
+							<th>Status</th>
                         </tr>
                         @foreach($transfers as $transfer)
+						@can('transfer_summary', $transfer)
                             <tr>
                                 <td>{{$transfer->accnumber}}</td>
                                 <td>{{$transfer->description}}</td>
 								<td>{{$transfer->sum}}</td>
 								<td>{{$transfer->name}}</td>
+								<td>{{$transfer->status}}</td>
 								
 
                             </tr>
+						@endcan	
                         @endforeach
                     </table>
                 </div>

@@ -43,7 +43,7 @@ class TransferController extends Controller
 			'userid' => request('userid')
 			
         ]);
-
+		
         return redirect('home');
     }
 	

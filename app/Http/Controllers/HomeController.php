@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $accounts = Account::all();
-
-        return view ('admin.pages.dashboard', compact('accounts'));
+		
+       return view ('admin.pages.dashboard', compact('accounts'));
     }
 }

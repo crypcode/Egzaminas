@@ -38,7 +38,6 @@
                             <tr>
                                 <td>{{$account->accnumber}}</td>
                                 <td>{{$account->balance}}</td>
-
                             </tr>
 							@endcan
                         @endforeach
